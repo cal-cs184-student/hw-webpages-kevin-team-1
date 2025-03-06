@@ -49,8 +49,7 @@
 		<h2>Section I: Bezier Curves and Surfaces</h2>
 
 		<h3>Part 1: Bezier curves with 1D de Casteljau subdivision</h3>
-		I implemented one step of de Casteljau's algorithm to evaluate Bezier curves. It works by taking a vector of n initial control points and a parameter t, creating a vector, and filling that vector with n-1 intermediate control points calculated by linearly interpolating between each of the n-1 adjacent pairs in the initial vector using the parameter t. This vector of intermediate control points is then returned. De Casteljau's algorithm repeats this interpolation n-1 times and returns the single point that is left over after every layer of interpolation.
-
+		<p>I implemented one step of de Casteljau's algorithm to evaluate Bezier curves. It works by taking a vector of n initial control points and a parameter t, creating a vector, and filling that vector with n-1 intermediate control points calculated by linearly interpolating between each of the n-1 adjacent pairs in the initial vector using the parameter t. This vector of intermediate control points is then returned. De Casteljau's algorithm repeats this interpolation n-1 times and returns the single point that is left over after every layer of interpolation.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
 			<table style="width: 100%; text-align: center; border-collapse: collapse;">
 			  <tr>
@@ -66,12 +65,13 @@
 				  <img src="task1_2.png" width="300px"/>
 				  <figcaption>2nd interp</figcaption>
 				</td>
-				<td style="text-align: center;">
-				  <img src="task1_3.png" width="300px"/>
-				  <figcaption>3rd interp</figcaption>
-				  </td>
 			  </tr>
 			  <tr>
+
+				<td style="text-align: center;">
+					<img src="task1_3.png" width="300px"/>
+					<figcaption>3rd interp</figcaption>
+					</td>
 				<td style="text-align: center;">
 					<img src="task1_4.png" width="300px"/>
 					<figcaption>4th interp</figcaption>
@@ -80,7 +80,9 @@
 					<img src="task1_5.png" width="300px"/>
 					<figcaption>5th interp</figcaption>
 				  </td>
-				  <td style="text-align: center;">
+			  </tr>
+			  <tr>
+				<td style="text-align: center;">
 					<img src="task1_6_curve.png" width="300px"/>
 					<figcaption>6th interp and resulting curve</figcaption>
 				  </td>
@@ -93,7 +95,7 @@
 		</div>
 
 		<h3>Part 2: Bezier surfaces with separable 1D de Casteljau</h3>
-		I implemented de Casteljau's algorithm for Bezier surfaces by first taking parameters u, v, and an input n x n vector of vectors of control points. I then create an empty vector, run the algorithm on each row in the 2D input vector with the parameter u, storing the resulting points in the vector. I then run the algorithm for curves again on the 1D vector of control points that was filled by the previous step, producing the desired evaluated point on the surface at u, v.
+		<p>I implemented de Casteljau's algorithm for Bezier surfaces by first taking parameters u, v, and an input n x n vector of vectors of control points. I then create an empty vector, run the algorithm on each row in the 2D input vector with the parameter u, storing the resulting points in the vector. I then run the algorithm for curves again on the 1D vector of control points that was filled by the previous step, producing the desired evaluated point on the surface at u, v. </p>
 
 		<img src="task2_teapot.png" width="400px"/>
 		<figcaption>teapot.bez</figcaption>
